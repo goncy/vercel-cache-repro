@@ -1,7 +1,7 @@
 export default async function TimePage() {
-  const noStoreTime = await fetch(`${process.env.VERCEL_URL}/api/time`, {cache: "no-store"});
-  const revalidatedTime = await fetch(`${process.env.VERCEL_URL}/api/time`, {next: {revalidate: 5}});
-  const cacheTime = await fetch(`${process.env.VERCEL_URL}/api/time`, {cache: "force-cache"});
+  const noStoreTime = await fetch(`https://${process.env.VERCEL_URL}/api/time`, {cache: "no-store"});
+  const revalidatedTime = await fetch(`https://${process.env.VERCEL_URL}/api/time`, {next: {revalidate: 5}});
+  const cacheTime = await fetch(`https://${process.env.VERCEL_URL}/api/time`, {cache: "force-cache"});
 
   return (
     <div>
