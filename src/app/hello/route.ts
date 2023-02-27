@@ -1,6 +1,7 @@
 import type { NextRequest } from "next/server";
 
-export const revalidate = 10;
+export const dynamic = 'force-static'
+export const revalidate = 10
 
 export function GET(request: NextRequest) {
   return new Response(`
